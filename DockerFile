@@ -1,4 +1,4 @@
-FROM python
+FROM nginx
 WORKDIR /app
 COPY . .
-CMD ["python","main.py"]
+RUN ["nginx","-d", "-v D:\практики\Практика 3\docker-1\resume.html:/usr/share/nginx/html/index/html","-p 8080:80"]
