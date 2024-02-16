@@ -1,5 +1,7 @@
 FROM nginx
 WORKDIR /app
 COPY . .
-COPY ./resume.html /usr/share/nginx/html/index.html
-RUN ["nginx","-d", "-p 8080:80"]
+COPY ./index.html /usr/share/nginx/html/index.html
+EXPOSE 8080
+RUN ["nginx"]
+
